@@ -38,8 +38,22 @@ public class DefaultNotSoSerial implements NotSoSerial {
     private Set<String> deserializingClasses = new ConcurrentSkipListSet<String>();
 
     public DefaultNotSoSerial() {
-        blacklist.add(internalName("org.apache.commons.collections.functors.InvokerTransformer"));
-        blacklist.add(internalName("org.apache.commons.collections4.functors.InvokerTransformer"));
+    		blacklist.add(internalName("java.lang.reflect.InvocationHandler"));
+    		blacklist.add(internalName("org.apache.commons.beanutils.BeanComparator"));
+    		blacklist.add(internalName("org.apache.commons.collections.map.LazyMap"));
+    		blacklist.add(internalName("org.apache.commons.collections4.comparators.TransformingComparator"));
+    		blacklist.add(internalName("org.apache.commons.collections4.functors.InstantiateTransformer"));
+    		blacklist.add(internalName("org.apache.commons.collections.keyvalue.TiedMapEntry"));
+    		blacklist.add(internalName("org.apache.commons.fileupload.disk.DiskFileItem"));
+    		blacklist.add(internalName("org.apache.commons.io.output.DeferredFileOutputStream"));
+    		blacklist.add(internalName("org.hibernate.tuple.component.AbstractComponentTuplizer"));
+    		blacklist.add(internalName("com.sun.rowset.JdbcRowSetImpl"));
+    		blacklist.add(internalName("org.jboss.interceptor.proxy.InterceptorMethodHandler"));
+    		blacklist.add(internalName("sun.rmi.transport.tcp.TCPEndpoint"));
+    		blacklist.add(internalName("sun.rmi.server.ActivationGroupImpl"));
+    		blacklist.add(internalName("javax.xml.transform.Templates"));
+    		blacklist.add(internalName("java.lang.reflect.Modifier"));
+    		blacklist.add(internalName("java.lang.reflect.Modifier"));
         blacklist.add(internalName("org.apache.commons.collections.functors.InstantiateTransformer"));
         blacklist.add(internalName("org.apache.commons.collections4.functors.InstantiateTransformer"));
         blacklist.add(internalName("org.codehaus.groovy.runtime.ConvertedClosure"));
